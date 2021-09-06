@@ -1,25 +1,14 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: frontend
+  name: my-pod
 spec:
   containers:
-  - name: app
-    image: images.my-company.example/app:v4
+  - name: my-container
+    image: myimage
     resources:
       requests:
-        memory: "64Mi"
-        cpu: "250m"
+        cpu: 2
+        example.com/foo: 1
       limits:
-        memory: "128Mi"
-        cpu: "500m"
-  - name: log-aggregator
-    image: images.my-company.example/log-aggregator:v6
-    resources:
-      requests:
-        memory: "64Mi"
-        cpu: "250m"
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
-        
+        example.com/foo: 1
